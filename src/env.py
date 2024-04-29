@@ -14,7 +14,7 @@ PG_COLOR = "#B3E5FC"
 # BALL_COLOR = "#FFEB3B"
 SQUID_W = 30
 SQUID_H = 45
-LEVEL_THRESHOLDS = [10, 30, 60, 100, 150,200]
+LEVEL_THRESHOLDS = [10, 30, 60, 100, 150, 200]
 LEVEL_PROPERTIES = {
     1: {'size_ratio': 1.0, 'vel': 25},
     2: {'size_ratio': 1.2, 'vel': 21},
