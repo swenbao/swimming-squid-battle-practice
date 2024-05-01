@@ -138,7 +138,7 @@ class MLPlay:
         # print(scene_info['frame'], ':', action)
         action_index = ACTIONS[action]
 
-        print(f"Frame {scene_info['frame']}: Action - {action}, Epsilon - {self.epsilon}")
+        # print(f"Frame {scene_info['frame']}: Action - {action}, Epsilon - {self.epsilon}")
 
         if self.prev_state_index is not None and self.prev_action_index is not None:
             # Calculate reward based on score difference
