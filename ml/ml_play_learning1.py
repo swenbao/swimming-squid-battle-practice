@@ -14,7 +14,7 @@ ACTIONS = {
 NUM_ACTIONS = len(ACTIONS)
 
 # State dimensions
-NUM_LVS = 4  # 1-4 levels for self and opponent
+NUM_LVS = 5  # 1-5 levels for self and opponent
 NUM_DIRECTIONS = 4  # front, left, back, right
 
 # Assuming the distance has 3 possible states (0, 1, 2)
@@ -94,7 +94,7 @@ class MLPlay:
     def get_state_index(self, scene_info):
 
         # Processes scene_info to determine the current state index
-        self_lv = scene_info['self_lv'] - 1  # Level 1-4 maps to indices 0-3
+        self_lv = scene_info['self_lv'] - 1  # Level 1-5 maps to indices 0-4
         opponent_lv = scene_info['opponent_lv'] - 1
         opponent_direction = self.calculate_direction(scene_info['self_x'], scene_info['self_y'], scene_info['opponent_x'], scene_info['opponent_y'])
         
@@ -138,7 +138,7 @@ class MLPlay:
         # print(scene_info['frame'], ':', action)
         action_index = ACTIONS[action]
 
-        print(f"Frame {scene_info['frame']}: Action - {action}, Epsilon - {self.epsilon}")
+        # print(f"Frame {scene_info['frame']}: Action - {action}, Epsilon - {self.epsilon}")
 
         if self.prev_state_index is not None and self.prev_action_index is not None:
             # Calculate reward based on score difference
