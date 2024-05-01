@@ -1,8 +1,8 @@
+import pygame
+import json
 import random
 from pprint import pprint
-
 import orjson
-import pygame
 
 
 class MLPlay:
@@ -29,7 +29,7 @@ class MLPlay:
             actions.append("RIGHT")
         else:
             actions.append("NONE")
-
+            
         return actions
 
 
